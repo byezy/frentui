@@ -1,0 +1,12 @@
+/target
+**/*.rs.bk
+Cargo.lock
+.idea
+.vscode
+*.swp
+*.swo
+*~
+/logs
+/test_data
+/rustdoc-ratatui-0.30.0
+

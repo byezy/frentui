@@ -1,0 +1,33 @@
+[package]
+name = "frentui"
+version = "0.1.0"
+edition = "2024"
+authors = ["byezy"]
+description = "Interactive TUI for batch file renaming using freneng"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/byezy/frentui"
+keywords = ["file", "rename", "batch", "interactive", "tui"]
+categories = ["command-line-utilities", "filesystem"]
+
+[[bin]]
+name = "frentui"
+path = "src/main.rs"
+
+[dependencies]
+freneng = { path = "../freneng" }
+tokio = { version = "1.48.0", features = ["full"] }
+ratatui = "0.30.0"
+crossterm = "0.29.0"
+log = "0.4.29"
+env_logger = "0.11.8"
+chrono = "0.4.42"
+glob = "0.3.3"
+
+[dev-dependencies]
+tempfile = "3.10"
+
+[profile.release]
+opt-level = "z" # or "z" for more aggressive size reduction (disables loop vectorization)
+lto = true      # Link-Time Optimization (crucial for size)
+debug = false   # Disable full debug info
+strip = "debuginfo" # Strip debug info (often default in newer Rust)
