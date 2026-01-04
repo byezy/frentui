@@ -10,12 +10,17 @@ This tool is separate from `frencli` to keep the CLI tool lean and focused, whil
 
 ## Features
 
-- **Guided Workflow**: Step-by-step menu-driven interface
-- **Flexible Navigation**: Go back or jump to any step
+- **Single-Screen Interface**: All sections visible simultaneously for better overview
+- **Interactive Navigation**: Full keyboard and mouse support
+- **Real-Time Preview**: See rename results before applying changes
+- **Template Support**: Use predefined patterns or create custom ones
+- **File Matching**: Glob pattern support for selecting files
+- **Exclusion Patterns**: Filter out files you don't want to rename
+- **Validation**: Comprehensive validation with issue reporting
+- **Undo Support**: Safely reverse rename operations
+- **Path Completion**: Tab completion for directory paths
+- **Scrollable Lists**: Handle large file sets efficiently
 - **State Preservation**: All choices maintained throughout the workflow
-- **Preview Before Apply**: See changes before committing
-- **Template Integration**: Select from predefined templates
-- **Error Recovery**: Clear error messages with retry options
 
 ## Installation
 
@@ -40,20 +45,32 @@ cp ./target/release/frentui ~/.local/bin/
 frentui
 ```
 
-The tool will guide you through:
-1. Selecting a directory
-2. Choosing files to process
-3. Defining a rename pattern (or selecting a template)
-4. Previewing changes
-5. Configuring rename options
-6. Applying the rename
-7. Viewing results
+The TUI displays all sections on a single screen:
 
-## Status
+- **Working Directory**: Select the directory to work in
+- **Match Files**: Define glob patterns to match files
+- **Exclusions**: Add patterns to exclude files
+- **Renaming Rule**: Enter a rename pattern or select a template
+- **Preview Pane**: See the rename preview in real-time
+- **Validation**: View any validation issues or warnings
+- **Apply**: Execute the rename operations
+- **Undo**: Reverse the last batch of renames
 
-🚧 **In Development** - This project is currently in the design phase.
+### Keyboard Navigation
 
-See the [design document](../design/frentui/INTERACTIVE_WORKFLOW_DESIGN.md) for the planned implementation.
+- Use `Tab` / `Shift+Tab` to navigate between sections
+- `Enter` activates the focused section
+- `Esc` cancels dialogs or returns to previous state
+- Arrow keys navigate within lists and tables
+- `Ctrl+C` or `q` quits the application
+
+### Mouse Support
+
+- Click on sections to focus them
+- Click on list items to select them
+- Use scroll wheel to navigate lists and tables
+
+**📋 [Changelog](CHANGELOG.md)** - See what's new in each version
 
 ## Relationship to Other Tools
 
@@ -63,5 +80,5 @@ See the [design document](../design/frentui/INTERACTIVE_WORKFLOW_DESIGN.md) for 
 
 ## License
 
-MIT OR Apache-2.0
+This project is licensed under the MIT License.
 
