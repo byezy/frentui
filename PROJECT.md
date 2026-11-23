@@ -6,7 +6,7 @@ Project record for this tree, reviewed 19 November 2026. Git facts are from this
 
 | | |
 |---|---|
-| Path | `~/development/tools/fren/frentui` |
+| Path | `~/dev/tools/fren/frentui` |
 | Kind | Rename toolkit |
 | Stack | Rust |
 | Repo | byezy/frentui |
